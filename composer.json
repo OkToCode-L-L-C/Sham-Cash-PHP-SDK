@@ -38,6 +38,9 @@
         "cs-fix": "php-cs-fixer fix"
     },
     "config": {
+        "platform": {
+            "php": "8.2.0"
+        },
         "sort-packages": true
     }
 }
