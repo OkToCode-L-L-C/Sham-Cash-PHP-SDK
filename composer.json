@@ -1,0 +1,43 @@
+{
+    "name": "oktocode/sham-cash-sdk",
+    "description": "PHP SDK for the ShamCash API.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["shamcash", "payments", "sdk", "oktocode"],
+    "homepage": "https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK",
+    "support": {
+        "issues": "https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/issues",
+        "source": "https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK"
+    },
+    "require": {
+        "php": "^8.2",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "guzzlehttp/guzzle": "^7.9",
+        "psr/log": "^2.0 || ^3.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "OkToCode\\ShamCash\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OkToCode\\ShamCash\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "phpstan": "phpstan analyse --memory-limit=512M",
+        "cs": "php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "php-cs-fixer fix"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
