@@ -1,12 +1,48 @@
-# ShamCash PHP SDK
+<p align="center">
+  <a href="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/actions/workflows/tests.yml"><img src="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/actions/workflows/tests.yml/badge.svg" alt="CI"></a>
+  <a href="https://packagist.org/packages/oktocode/sham-cash-sdk"><img src="https://img.shields.io/packagist/v/oktocode/sham-cash-sdk?label=packagist" alt="Packagist version"></a>
+  <a href="https://packagist.org/packages/oktocode/sham-cash-sdk"><img src="https://img.shields.io/packagist/php-v/oktocode/sham-cash-sdk?label=php" alt="PHP version"></a>
+  <a href="https://packagist.org/packages/oktocode/sham-cash-sdk"><img src="https://img.shields.io/packagist/dt/oktocode/sham-cash-sdk?label=downloads" alt="Packagist downloads"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/packagist/l/oktocode/sham-cash-sdk?label=license" alt="MIT license"></a>
+</p>
 
-PHP SDK for the ShamCash API. It encrypts each request, calls the bill, refund, and transaction endpoints, and decrypts the webhook ShamCash sends back to your server.
+<h1 align="center">ShamCash PHP SDK</h1>
+
+<p align="center">
+  <a href="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/blob/master/README.md"><img src="https://img.shields.io/badge/lang-en-red.svg" alt="en"></a>
+  <a href="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/blob/master/README.ar.md"><img src="https://img.shields.io/badge/lang-ar-green.svg" alt="ar"></a>
+</p>
+
+<p align="center">
+  <a href="https://packagist.org/packages/oktocode/sham-cash-sdk"><strong>Packagist</strong></a>
+  &nbsp;&middot;&nbsp;
+  <a href="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK"><strong>GitHub</strong></a>
+  &nbsp;&middot;&nbsp;
+  <a href="https://ok2code.com"><strong>ok2code.com</strong></a>
+</p>
+
+<p align="center">
+  Create ShamCash bills, refund payments, list transactions, and verify webhooks from PHP.
+</p>
+
+## About
+
+Implemented by [OkToCode](https://ok2code.com).
+
+The SDK encrypts each request, calls the bill, refund, and transaction endpoints, and decrypts the webhook ShamCash sends back to your server.
+
+- **Bills and refunds.** Create a bill, load it, and refund it with an idempotency key you choose.
+- **Transactions.** Read one page, or walk every page with `eachTransaction()`.
+- **Webhooks.** Pass the raw POST body to `parseWebhook()` and branch on paid or expired.
+- **Safe amounts.** Money stays a decimal string on the way in and on the way out.
+
+## Install
 
 ```bash
 composer require oktocode/sham-cash-sdk
 ```
 
-The namespace is `OkToCode\ShamCash`. PHP 8.2 or newer is required.
+Package: [oktocode/sham-cash-sdk](https://packagist.org/packages/oktocode/sham-cash-sdk). The namespace is `OkToCode\ShamCash`. PHP 8.2 or newer is required.
 
 ## Configure the client
 
