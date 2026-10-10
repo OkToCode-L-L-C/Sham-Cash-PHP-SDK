@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-  <strong>SDK Version:</strong> 1.0.0 · <strong>ShamCash API Version:</strong> v1.0.0
+  <strong>SDK Version:</strong> 1.0.1 · <strong>ShamCash API Version:</strong> v1.0.0
 </p>
 
 ## Prerequisites
