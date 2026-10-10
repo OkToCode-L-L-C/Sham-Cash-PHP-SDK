@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-  <strong>إصدار المكتبة:</strong> 1.0.0 · <strong>إصدار ShamCash API:</strong> v1.0.0
+  <strong>إصدار المكتبة:</strong> 1.0.1 · <strong>إصدار ShamCash API:</strong> v1.0.0
 </p>
 
 ## المتطلبات المسبقة
