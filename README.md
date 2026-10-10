@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/blob/master/README.md"><img src="https://img.shields.io/badge/lang-English-red.svg" alt="en"></a>
-  <a href="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/blob/master/README.ar.md"><img src="https://img.shields.io/badge/lang-Arabic-red.svg" alt="ar"></a>
+  <a href="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/blob/master/README.ar.md"><img src="https://img.shields.io/badge/lang-Arabic-green.svg" alt="ar"></a>
 </p>
 
 <p align="center">
