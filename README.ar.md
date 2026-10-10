@@ -1,60 +1,73 @@
-<p align="center">
+ <p align="center">
   <a href="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/actions/workflows/tests.yml"><img src="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/actions/workflows/tests.yml/badge.svg" alt="CI"></a>
-  <a href="https://packagist.org/packages/oktocode/sham-cash-sdk"><img src="https://img.shields.io/packagist/v/oktocode/sham-cash-sdk?label=packagist" alt="Packagist version"></a>
-  <a href="https://packagist.org/packages/oktocode/sham-cash-sdk"><img src="https://img.shields.io/packagist/php-v/oktocode/sham-cash-sdk?label=php" alt="PHP version"></a>
-  <a href="https://packagist.org/packages/oktocode/sham-cash-sdk"><img src="https://img.shields.io/packagist/dt/oktocode/sham-cash-sdk?label=downloads" alt="Packagist downloads"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/packagist/l/oktocode/sham-cash-sdk?label=license" alt="MIT license"></a>
+  <a href="https://packagist.org/packages/oktocode/sham-cash-sdk"><img src="https://img.shields.io/packagist/v/oktocode/sham-cash-sdk?label=packagist" alt="إصدار Packagist"></a>
+  <a href="https://packagist.org/packages/oktocode/sham-cash-sdk"><img src="https://img.shields.io/packagist/php-v/oktocode/sham-cash-sdk?label=php" alt="إصدار PHP"></a>
+  <a href="https://packagist.org/packages/oktocode/sham-cash-sdk"><img src="https://img.shields.io/packagist/dt/oktocode/sham-cash-sdk?label=downloads" alt="عدد التنزيلات"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/packagist/l/oktocode/sham-cash-sdk?label=license" alt="ترخيص MIT"></a>
 </p>
 
 <h1 align="center">ShamCash PHP SDK</h1>
 
 <p align="center">
-  <a href="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/blob/master/README.md"><img src="https://img.shields.io/badge/lang-en-red.svg" alt="en"></a>
-  <a href="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/blob/master/README.ar.md"><img src="https://img.shields.io/badge/lang-ar-green.svg" alt="ar"></a>
+  <a href="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/blob/master/README.md"><img src="https://img.shields.io/badge/lang-en-red.svg" alt="English"></a>
+  <a href="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK/blob/master/README.ar.md"><img src="https://img.shields.io/badge/lang-ar-green.svg" alt="العربية"></a>
 </p>
 
 <p align="center">
   <a href="https://packagist.org/packages/oktocode/sham-cash-sdk"><strong>Packagist</strong></a>
-  &nbsp;&middot;&nbsp;
+  &nbsp;·&nbsp;
   <a href="https://github.com/OkToCode-L-L-C/Sham-Cash-PHP-SDK"><strong>GitHub</strong></a>
-  &nbsp;&middot;&nbsp;
+  &nbsp;·&nbsp;
   <a href="https://ok2code.com"><strong>ok2code.com</strong></a>
 </p>
 
-<div dir="rtl">
-
 <p align="center">
-  إنشاء فواتير ShamCash، واسترد المدفوعات، واعرض الحركات، وتحقق من إشعارات الويب من PHP.
+  مكتبة PHP للتكامل مع ShamCash، تتيح إنشاء فواتير الدفع واسترداد المبالغ وعرض المعاملات والتحقق من إشعارات الدفع الواردة (Webhooks).
 </p>
 
-## حول
+<p align="center">
+  <strong>إصدار المكتبة:</strong> 1.0.0 · <strong>إصدار ShamCash API:</strong> v1.0.0
+</p>
 
-نفّذته [OkToCode](https://ok2code.com).
+## المتطلبات المسبقة
 
-يشفر SDK كل طلب، ويستدعي نقاط الفواتير والاسترداد والحركات، ويفك تشفير إشعار الويب الذي يرسله ShamCash إلى خادمك.
+قبل البدء بالتكامل مع ShamCash، يجب تسجيل حساب تجاري موثّق، وإكمال إجراءات إنشاء الخدمة (Service Creation)، والحصول على بيانات اعتماد API اللازمة لربط تطبيقك بالخدمة.
 
-- **الفواتير والاسترداد.** أنشئ فاتورة، ثم اقرأها، واسترد قيمتها بمفتاح منع تكرار تختاره أنت.
-- **الحركات.** اقرأ صفحة واحدة، أو تنقّل بين كل الصفحات عبر `eachTransaction()`.
-- **إشعارات الويب.** مرّر متن طلب POST كما وصل إلى `parseWebhook()` ثم فرّع المعالجة بين حالة الدفع وانتهاء الصلاحية.
-- **مبالغ دقيقة.** يبقى المبلغ سلسلة عشرية عند الإرسال وعند الاستقبال.
+للاطلاع على المعلومات المطلوبة وتعليمات التسجيل، راجع [دليل المتطلبات المسبقة وتسجيل الخدمة](prerequisite.ar.md).
 
-## التثبيت
 
-</div>
+## نبذة عن المكتبة (About)
+
+تم تطوير هذه المكتبة بواسطة [OkToCode](https://ok2code.com).
+
+تتولى المكتبة تشفير كل طلب قبل إرساله إلى ShamCash API، والتعامل مع نقاط الوصول الخاصة بإنشاء الفواتير واسترداد المبالغ وعرض المعاملات، بالإضافة إلى فك تشفير إشعارات Webhook التي ترسلها ShamCash إلى خادمك.
+
+توفر المكتبة الوظائف التالية:
+
+- **الفواتير واسترداد المبالغ (Bills and Refunds):** إنشاء فاتورة دفع واسترجاع بياناتها، وتنفيذ عملية استرداد المبلغ باستخدام مفتاح منع تكرار العملية (Idempotency Key) الذي تحدده.
+- **المعاملات (Transactions):** استرجاع صفحة واحدة من المعاملات أو المرور على جميع الصفحات تلقائياً باستخدام `eachTransaction()`.
+- **إشعارات Webhook:** تمرير نص طلب POST الأصلي إلى `parseWebhook()` للتحقق من الإشعار ومعالجة الحالات، مثل نجاح الدفع أو انتهاء صلاحية الفاتورة.
+- **التعامل الآمن مع المبالغ:** تمثيل المبالغ المالية كسلاسل نصية عشرية (Decimal Strings) عند تمريرها إلى المكتبة وعند استلامها منها، لتجنب أخطاء الدقة الناتجة عن استخدام الأعداد العشرية العائمة (Floating-Point Numbers).
+
+## التثبيت (Install)
+
+ثبّت المكتبة باستخدام Composer:
 
 ```bash
 composer require oktocode/sham-cash-sdk
 ```
 
-<div dir="rtl">
+الحزمة متاحة على [Packagist: oktocode/sham-cash-sdk](https://packagist.org/packages/oktocode/sham-cash-sdk).
 
-الحزمة: [oktocode/sham-cash-sdk](https://packagist.org/packages/oktocode/sham-cash-sdk). فضاء الأسماء هو `OkToCode\ShamCash`. يتطلب PHP 8.2 أو أحدث.
+مساحة الأسماء (Namespace) الخاصة بالمكتبة هي `OkToCode\ShamCash\`.
 
-## إعداد العميل
+**المتطلبات:** PHP 8.2 أو إصدار أحدث.
 
-يمنحك ShamCash مفتاح الوكيل، وسرًا بطول 32 بايتًا مشفرًا بصيغة Base64، ورابط الأساس عند إنشاء الخدمة. أبقِ كلمات المرور على الخادم.
+## إعداد العميل (Configure the Client)
 
-</div>
+عند إنشاء الخدمة، ستحصل من ShamCash على `agentKey` ومفتاح سري مشفّر بصيغة Base64 بطول 32 بايت، بالإضافة إلى عنوان `baseUrl`. يجب الاحتفاظ بالمفتاح السري على الخادم وعدم كشفه للمستخدمين.
+
+مثال على إنشاء عميل للاتصال بالخدمة:
 
 ```php
 use OkToCode\ShamCash\Client;
@@ -69,15 +82,21 @@ $client = new Client(
 );
 ```
 
-<div dir="rtl">
+أنشئ كائناً مستقلاً من `Client` لكل تاجر.
 
-أنشئ عميلًا واحدًا لكل تاجر. يبني SDK عميل Guzzle بمهلة اتصال قدرها 5 ثوانٍ ومهلة طلب قدرها 30 ثانية، ويتحقق من TLS. مرّر عميل PSR-18 الخاص بك عندما يحتاج اختبار أو جسر لاحق إلى مكدس HTTP مختلف، وأبقِ التحقق من TLS مفعّلًا على ذلك العميل.
+تستخدم المكتبة عميل Guzzle مُعدّاً مسبقاً، مع الإعدادات التالية:
 
-## إنشاء فاتورة
+- **مهلة الاتصال (Connect Timeout):** 5 ثوانٍ.
+- **مهلة الطلب (Request Timeout):** 30 ثانية.
+- **التحقق من TLS:** مفعّل للتحقق من أمان الاتصال.
 
-أنشئ الفاتورة عندما يختار الزبون ShamCash، لا عند حفظ السلة أول مرة. تنتهي صلاحية الفاتورة غير المدفوعة بعد 10 دقائق.
+إذا احتجت، أثناء الاختبارات أو عند دمج المكتبة مع نظام آخر، إلى استخدام آلية اتصال HTTP مختلفة، يمكنك تمرير عميل متوافق مع معيار PSR-18. تأكد من إبقاء التحقق من TLS مفعّلاً في ذلك العميل أيضاً.
 
-</div>
+## إنشاء فاتورة دفع (Create a Bill)
+
+أنشئ فاتورة الدفع عندما يختار العميل ShamCash وسيلةً للدفع، وليس بمجرد حفظ سلة المشتريات لأول مرة.
+
+تنتهي صلاحية فاتورة الدفع غير المدفوعة بعد 10 دقائق.
 
 ```php
 $bill = $client->createBill(
@@ -90,23 +109,36 @@ $bill = $client->createBill(
 header('Location: ' . $bill->paymentUrl);
 ```
 
-<div dir="rtl">
+وجّه العميل إلى الرابط الموجود في `paymentUrl` لفتح صفحة الدفع باستخدام متصفح النظام.
 
-وجّه الزبون إلى `paymentUrl` في متصفح النظام. عرض الويب المضمّن يعطل الرابط العميق لتطبيق ShamCash.
+**مهم:** لا تفتح رابط الدفع داخل متصفح مضمّن (Embedded WebView)، لأن ذلك قد يمنع رابط الربط المباشر بتطبيق ShamCash (Deep Link) من العمل بشكل صحيح.
 
-قيمة `Currency::Usd` هي `1`، وقيمة `Currency::Syp` هي `2`. المبالغ سلاسل عشرية مثل `"10.50"`.
+قيم العملات المدعومة في المثال:
 
-استخدم `billNo` جديدًا عندما يعيد الزبون المحاولة. لاحقة مثل `Order-123-1` و `Order-123-2` تتجنب رسالة «رقم الفاتورة موجود مسبقًا» للطلب نفسه.
+- `Currency::Usd` تمثل العملة ذات المعرّف `1`.
+- `Currency::Syp` تمثل العملة ذات المعرّف `2`.
 
-## رابطا الاستدعاء وإعادة التوجيه
+مرّر المبلغ كسلسلة نصية عشرية، مثل `"10.50"`، بدلاً من تمريره كعدد عشري.
 
-رابط `callbackUrl` هو المكان الذي يرسل إليه ShamCash إشعار الويب المشفّر بطلب POST. اضبطه على العميل عندما تستخدم كل الفواتير نقطة النهاية نفسها.
+عند إعادة محاولة الدفع للطلب نفسه، استخدم قيمة جديدة وفريدة للمتغير `billNo`. على سبيل المثال، يمكنك استخدام `Order-123-1` للمحاولة الأولى و`Order-123-2` للمحاولة الثانية. يساعد ذلك على تجنّب الخطأ `bill number already exists` الناتج عن إعادة استخدام رقم فاتورة سبق إنشاؤه.
 
-رابط `redirectUrl` هو المكان الذي يعود إليه متصفح المستخدم بعد الدفع. لا يلحق ShamCash القيمة `billNo` بهذا الرابط. ضع معرّف الطلب في هذا الرابط عندما تحتاجه صفحة العودة.
+## عناوين Callback وRedirect
 
-كلاهما اختياري على العميل واختياري في `createBill()`. لكل رابط، يستخدم SDK وسيطة `createBill()` عندما تُمرَّر، وإلا يستخدم قيمة العميل. ما زال ShamCash يطلب الرابطين داخل الحمولة المشفّرة. إذا بقي أي رابط فارغًا، يرمي `createBill()` الاستثناء `InvalidArgumentException` ولا يرسل شيئًا.
+يُستخدم `callbackUrl` لتحديد العنوان الذي سترسل إليه ShamCash إشعارات Webhook المشفّرة باستخدام طلب POST. يمكنك ضبطه عند إنشاء العميل إذا كانت جميع الفواتير ستستخدم نقطة الوصول نفسها.
 
-</div>
+أما `redirectUrl` فهو العنوان الذي سيعود إليه متصفح المستخدم بعد إتمام عملية الدفع.
+
+لا تضيف ShamCash قيمة `billNo` تلقائياً إلى عنوان إعادة التوجيه. لذلك، إذا كانت صفحة العودة تحتاج إلى معرفة الطلب المرتبط بالدفع، فعليك تضمين معرّف الطلب ضمن عنوان `redirectUrl` بنفسك.
+
+كلا الخيارين اختياري عند إنشاء `Client`، كما أنهما اختياريان عند استدعاء `createBill()`، لكن ShamCash تشترط وجودهما في بيانات الطلب المشفّرة.
+
+تعمل المكتبة وفق القواعد التالية لكل عنوان:
+
+1. إذا مرّرت `callbackUrl` أو `redirectUrl` إلى `createBill()`، فستستخدم المكتبة القيمة التي مرّرتها لهذه الفاتورة.
+2. إذا لم تمرّر أحد العنوانين، فستستخدم المكتبة القيمة المضبوطة مسبقاً عند إنشاء `Client`.
+3. إذا بقي أي من العنوانين فارغاً بعد تطبيق هذه القواعد، فستطلق `createBill()` استثناء `InvalidArgumentException` ولن ترسل الطلب إلى ShamCash.
+
+مثال:
 
 ```php
 $client->createBill(
@@ -124,29 +156,45 @@ $client->createBill(
 );
 ```
 
-<div dir="rtl">
+في المثال الأول، ستستخدم الفاتورة عنوانَي `callbackUrl` و`redirectUrl` الافتراضيين المضبوطين عند إنشاء العميل.
 
-الفاتورة الأولى تستخدم القيمتين الافتراضيتين للعميل. الفاتورة الثانية تستبدل `callbackUrl` و `redirectUrl` لتلك الفاتورة فقط. احذف أي وسيطة للإبقاء على قيمة العميل. انظر [examples/create-bill.php](examples/create-bill.php).
+أما في المثال الثاني، فستستخدم الفاتورة العنوانين المحددين في استدعاء `createBill()` فقط، دون تغيير القيم الافتراضية للعميل أو التأثير على الفواتير الأخرى.
 
-## قراءة فاتورة
+إذا لم تمرّر أحد العنوانين إلى `createBill()`، فستحتفظ المكتبة باستخدام القيمة الافتراضية المقابلة له.
 
-</div>
+راجع المثال الكامل: [examples/create-bill.php](examples/create-bill.php).
+
+## استرجاع بيانات فاتورة (Read a Bill)
+
+يمكنك استرجاع بيانات فاتورة سبق إنشاؤها باستخدام `getBill()`:
 
 ```php
 $bill = $client->getBill('Order-123-1');
 ```
 
-<div dir="rtl">
+استخدم هذه الدالة مرة واحدة فقط، بعد مرور 10 دقائق على الأقل من إنشاء الفاتورة، وفقط إذا لم يصلك إشعار Webhook الخاص بها.
 
-استدعِ هذا مرة واحدة، بعد 10 دقائق على الأقل من إنشاء الفاتورة، وفقط عندما لا يصل إشعار الويب. لا تستطلعها بشكل متكرر. انظر [examples/get-bill.php](examples/get-bill.php).
+**لا تستخدم `getBill()` للاستعلام المتكرر عن حالة الفاتورة (Polling).** اعتمد على إشعارات Webhook لمتابعة نتيجة الدفع، واستخدم الاستعلام عن الفاتورة كخيار احتياطي عند عدم وصول الإشعار.
 
-تكون خاصية `$bill->status` من النوع `BillStatus` عندما يرسل ShamCash معرّف حالة معروفًا: قيد الانتظار، أو استرداد، أو منتهية الصلاحية، أو مدفوعة، أو مستردّة جزئيًا. يحتفظ الحقل `$bill->raw` بالكائن بعد فك الترميز، ويشمل أي حقل لم يربطه هذا SDK بعد.
+راجع المثال: [examples/get-bill.php](examples/get-bill.php).
 
-## الاسترداد
+تكون قيمة `$bill->status` من النوع `BillStatus` إذا أعادت ShamCash معرّف حالة معروفاً للمكتبة. الحالات المدعومة هي:
 
-مرّر مفتاح منع تكرار بطول يتراوح بين 10 و 100 حرفًا. إذا انتهت مهلة الطلب، أرسل المفتاح نفسه مرة أخرى. يعيد ShamCash الاسترداد الأصلي عندما يكون هذا المفتاح قد نجح مسبقًا، ويترك المفتاح غير مستخدم عندما يفشل الاسترداد.
+- `pending`: الفاتورة بانتظار الدفع.
+- `refund`: تم استرداد المبلغ.
+- `expired`: انتهت صلاحية الفاتورة.
+- `paid`: تم الدفع.
+- `partly refunded`: تم استرداد جزء من المبلغ.
 
-</div>
+أما `$bill->raw`، فيحتوي على الكائن الذي أعادته ShamCash بعد فك ترميزه، بما في ذلك الحقول التي لم تتعامل معها المكتبة أو لم تربطها بخصائص محددة بعد.
+
+## استرداد المبلغ (Refund)
+
+عند طلب استرداد مبلغ، مرّر مفتاحاً لمنع تكرار العملية (Idempotency Key) يتراوح طوله بين 10 و100 محرف.
+
+إذا انتهت مهلة الطلب دون الحصول على استجابة، فأعد المحاولة باستخدام **المفتاح نفسه**.
+
+إذا كانت عملية الاسترداد قد نجحت سابقاً باستخدام هذا المفتاح، فستعيد ShamCash نتيجة عملية الاسترداد الأصلية بدلاً من تنفيذ عملية جديدة. أما إذا فشلت العملية، فسيبقى المفتاح متاحاً لإعادة المحاولة.
 
 ```php
 $refund = $client->refundBill(
@@ -157,31 +205,51 @@ $refund = $client->refundBill(
 );
 ```
 
-<div dir="rtl">
+تتم عملية الاسترداد باستخدام عملة الفاتورة الأصلية، ولا يجوز أن يتجاوز مجموع مبالغ الاسترداد قيمة المبلغ الذي دفعه العميل فعلياً.
 
-يستخدم الاسترداد عملة الفاتورة. لا يجوز أن يتجاوز مجموع كل الاستردادات المبلغ المدفوع. انظر [examples/refund-bill.php](examples/refund-bill.php).
+راجع المثال: [examples/refund-bill.php](examples/refund-bill.php).
 
-## الحركات
+## المعاملات (Transactions)
 
-</div>
+يمكنك استرجاع صفحة من المعاملات باستخدام `listTransactions()`، أو المرور على جميع الصفحات المتاحة تلقائياً باستخدام `eachTransaction()`.
 
 ```php
-$page = $client->listTransactions('2026-01-01', '2026-01-20', afterTranId: 0, limit: 1000);
+$page = $client->listTransactions(
+    '2026-01-01',
+    '2026-01-20',
+    afterTranId: 0,
+    limit: 1000
+);
 
 foreach ($client->eachTransaction('2026-01-01', '2026-01-20', limit: 1000) as $transaction) {
-    // $transaction->tranType يكون دفعة أو استردادًا عندما يكون معرّف النوع معروفًا.
+    // تكون قيمة $transaction->tranType هي payment أو refund
+    // عندما يكون معرّف نوع المعاملة معروفاً للمكتبة.
 }
 ```
 
-<div dir="rtl">
+تتعامل `eachTransaction()` مع ترقيم الصفحات تلقائياً، وفق الآلية التالية:
 
-يتبع `eachTransaction()` الحقل `hasMore` ويرسل `lastReturnedTranId` السابق بوصفه `afterTranId`. يجب أن يكون `limit` بين 10 و 2500. القيمة الافتراضية هي 500. انظر [examples/list-transactions.php](examples/list-transactions.php).
+1. تتحقق من قيمة `hasMore` لمعرفة ما إذا كانت هناك صفحات إضافية.
+2. تستخدم قيمة `lastReturnedTranId` من الصفحة السابقة وتمريرها في `afterTranId` عند طلب الصفحة التالية.
+3. تتابع العملية حتى لا تعود هناك صفحات أخرى.
 
-## إشعارات الويب
+يجب أن تكون قيمة `limit` بين 10 و2500 معاملة، والقيمة الافتراضية هي `500`.
 
-يرسل ShamCash طلب POST بالمحتوى `{ "encData": "..." }` إلى `callbackUrl` عندما تُدفع الفاتورة أو تنتهي صلاحيتها. مرّر ذلك المتن الخام إلى SDK. إعادة ترميز JSON قد تغيّر `encData` وتكسر فك التشفير.
+راجع المثال: [examples/list-transactions.php](examples/list-transactions.php).
 
-</div>
+## إشعارات Webhook
+
+عند دفع الفاتورة أو انتهاء صلاحيتها، ترسل ShamCash طلب POST إلى العنوان المحدد في `callbackUrl`، ويحتوي جسم الطلب (Request Body) على بيانات مشفّرة بالشكل التالي:
+
+```json
+{ "encData": "..." }
+```
+
+مرّر جسم الطلب الأصلي مباشرةً إلى المكتبة لمعالجة الإشعار.
+
+**مهم:** لا تقم بفك ترميز JSON ثم إعادة ترميزه قبل تمريره إلى المكتبة، لأن ذلك قد يغيّر قيمة `encData` ويؤدي إلى فشل فك التشفير.
+
+مثال على معالجة إشعار Webhook:
 
 ```php
 use OkToCode\ShamCash\Enum\BillStatus;
@@ -197,40 +265,81 @@ try {
 }
 
 if ($event->status === BillStatus::Paid) {
-    // $event->tranId هو معرّف دفعة ShamCash.
+    // $event->tranId هو معرّف عملية الدفع لدى ShamCash.
     // fulfillOrder($event->billNo, $event->tranId);
 } elseif ($event->status === BillStatus::Expired) {
-    // $event->tranId تكون null. لم يدفع الزبون خلال 10 دقائق.
+    // تكون قيمة $event->tranId هي null.
+    // هذا يعني أن العميل لم يدفع خلال 10 دقائق.
     // releaseOrder($event->billNo);
 }
 
 http_response_code(200);
 ```
 
-<div dir="rtl">
+### معالجة الإشعارات بأمان
 
-طبّق هذا التغيير مرة واحدة لكل `billNo` وحالة. يعيد ShamCash المحاولة عندما لا يتلقى HTTP 200 خلال 10 ثوانٍ، لذا يجب ألا يؤدي وصول الحدث نفسه مرة ثانية إلى تنفيذ الطلب من جديد. أعد 200 قبل العمل البطيء مثل إرسال البريد.
+يجب تنفيذ التغيير المرتبط بالإشعار مرة واحدة فقط لكل زوج من القيمتين `billNo` و`status`.
 
-يرفض `parseWebhook()` الرمز الذي انتهت `exp` الخاصة به، أو الذي تكون `iat` الخاصة به بعيدة جدًا في المستقبل. الانحراف المسموح للساعة افتراضيًا هو 30 ثانية.
+تعيد ShamCash إرسال الإشعار إذا لم تحصل على استجابة HTTP 200 خلال 10 ثوانٍ. لذلك، قد يصل الإشعار نفسه أكثر من مرة، ويجب ألا يؤدي تكراره إلى تنفيذ الطلب أو تأكيد الدفع مرتين.
 
-نقطة النهاية الكاملة موجودة في [examples/webhook.php](examples/webhook.php).
+لضمان سلامة المعالجة:
 
-## الأخطاء
+- اجعل تحديث حالة الطلب أو تنفيذ إجراء الدفع قابلاً للتكرار بأمان (Idempotent).
+- تحقّق من أن الفاتورة لم تُعالج مسبقاً بالحالة نفسها قبل تنفيذ أي إجراء.
+- أعد استجابة HTTP 200 دون تأخير غير ضروري.
+- نفّذ المهام البطيئة، مثل إرسال البريد الإلكتروني، بعد الاستجابة أو عبر نظام مهام خلفي (Background Queue).
 
-الأخطاء المحلية، مثل مبلغ غير صالح أو رابط مفقود، ترمي `InvalidArgumentException` قبل أي طلب HTTP.
+تتحقق `parseWebhook()` أيضاً من صلاحية رمز الإشعار؛ إذ ترفض الرمز إذا انتهت صلاحيته وفق `exp`، أو إذا كانت قيمة `iat` تشير إلى وقت مستقبلي أبعد من المسموح به.
 
-إخفاقات ShamCash التجارية ما زالت تستخدم HTTP 200. ترمي `ApiException`. اقرأ `$exception->result` (`ResultCode`) و `$exception->resultCode`. أخطاء HTTP 400 و 404 و 415 و 500 والمهلات و JSON غير الصالح ترمي `TransportException`. الرمز غير الصالح يرمي `CryptoException`.
+هامش اختلاف الساعة الافتراضي (Clock Skew) هو 30 ثانية.
 
-قد تُحفظ الفاتورة حتى لو سقطت استجابة الإنشاء. المحاولة التالية تعيد النتيجة `1704`. حمّل الفاتورة التي أنشأتها مسبقًا:
+راجع المثال الكامل لنقطة استقبال الإشعارات: [examples/webhook.php](examples/webhook.php).
 
-</div>
+## معالجة الأخطاء (Errors)
+
+تختلف الاستثناءات التي تطلقها المكتبة حسب نوع الخطأ.
+
+### 1. أخطاء الإدخال والإعدادات
+
+تؤدي الأخطاء المحلية، مثل إدخال مبلغ غير صالح أو عدم تحديد عنوان URL مطلوب، إلى إطلاق `InvalidArgumentException` قبل إرسال أي طلب HTTP.
+
+### 2. أخطاء ShamCash API
+
+قد تعيد ShamCash أخطاء متعلقة بقواعد العمل (Business Errors) مع استجابة HTTP 200. في هذه الحالة، تطلق المكتبة الاستثناء `ApiException`.
+
+يمكنك فحص الخصائص التالية لمعرفة تفاصيل الخطأ:
+
+- `$exception->result`: نتيجة من النوع `ResultCode`.
+- `$exception->resultCode`: رمز النتيجة الذي أعادته ShamCash.
+
+### 3. أخطاء الاتصال والنقل
+
+تطلق المكتبة `TransportException` عند حدوث مشكلات مثل:
+
+- استجابات HTTP برموز `400` أو `404` أو `415` أو `500`.
+- انتهاء مهلة الاتصال أو الطلب (Timeout).
+- استلام JSON غير صالح.
+
+أما إذا فشل فك تشفير الرمز أو التحقق منه، فتُطلق المكتبة `CryptoException`.
+
+## معالجة إعادة محاولة إنشاء الفاتورة
+
+قد تنجح ShamCash في إنشاء الفاتورة وتخزينها، لكن الاستجابة لا تصل إلى تطبيقك بسبب انقطاع الاتصال أو انتهاء المهلة.
+
+إذا حاول تطبيقك إنشاء الفاتورة مرة أخرى باستخدام `billNo` نفسه، فقد تعيد ShamCash رمز النتيجة `1704`، الذي يشير إلى أن رقم الفاتورة موجود مسبقاً.
+
+في هذه الحالة، لا تنشئ فاتورة جديدة برقم مختلف تلقائياً، لأن الفاتورة الأولى قد تكون موجودة بالفعل. بدلاً من ذلك، استرجع بيانات الفاتورة باستخدام `getBill()`.
 
 ```php
 use OkToCode\ShamCash\Enum\ResultCode;
 use OkToCode\ShamCash\Exception\ApiException;
 
 try {
-    $bill = $client->createBill(billNo: $billNo, amount: '10.50', currency: Currency::Usd);
+    $bill = $client->createBill(
+        billNo: $billNo,
+        amount: '10.50',
+        currency: Currency::Usd
+    );
 } catch (ApiException $exception) {
     if ($exception->result !== ResultCode::BillNoAlreadyExists) {
         throw $exception;
@@ -240,15 +349,19 @@ try {
 }
 ```
 
-<div dir="rtl">
+يتعامل هذا المثال مع حالة وجود الفاتورة مسبقاً فقط، ويعيد إطلاق الاستثناء إذا كان الخطأ ناتجاً عن سبب آخر.
 
-انظر [examples/retry-create-bill.php](examples/retry-create-bill.php).
+راجع المثال الكامل: [examples/retry-create-bill.php](examples/retry-create-bill.php).
 
-لا يعيد SDK المحاولة. استدعاء `getBill()` و `listTransactions()` مرة أخرى آمن. أعد `refundBill()` فقط بمفتاح منع التكرار نفسه.
+**ملاحظات مهمة حول إعادة المحاولة:**
 
-## التطوير
+- لا تنفّذ المكتبة عمليات إعادة المحاولة تلقائياً.
+- يمكن إعادة استدعاء `getBill()` و`listTransactions()` عند الحاجة.
+- عند إعادة محاولة `refundBill()`، يجب استخدام مفتاح `idempotencyKey` نفسه لمنع تنفيذ عملية استرداد مكررة.
 
-</div>
+## التطوير (Development)
+
+لتثبيت اعتماديات المشروع وتشغيل الاختبارات وفحوصات جودة الكود، نفّذ الأوامر التالية:
 
 ```bash
 composer install
@@ -256,3 +369,5 @@ composer test
 composer phpstan
 composer cs
 ```
+
+تُستخدم هذه الأوامر لتثبيت الحزم المطلوبة، وتشغيل الاختبارات، وفحص الأنواع الثابتة باستخدام PHPStan، والتحقق من توافق تنسيق الكود مع معايير المشروع.
