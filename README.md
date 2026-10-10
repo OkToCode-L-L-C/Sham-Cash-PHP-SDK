@@ -29,36 +29,12 @@
   <strong>SDK Version:</strong> 1.0.0 · <strong>ShamCash API Version:</strong> v1.0.0
 </p>
 
-## Service Registration
+## Prerequisites
 
-Before integrating your application with ShamCash, you must complete the Service Creation process.
+Before integrating ShamCash, you must register a verified commercial account, complete the Service Creation process, and obtain your API credentials.
 
-## 1. Register a Commercial Account
+See the [Prerequisites and Service Registration Guide](prerequisite.md) for the required information and registration instructions.
 
-You must have a valid, active, and fully verified ShamCash commercial account before creating your service.
-
-If you don't already have one, you can register online: <a href="https://www.shamcash.sy/ar/createAccount/commercial">Register a ShamCash Commercial Account</a>
-
-## 2. Prepare the Required Information
-
-During the service creation process, you will need to provide the following information:
-
-- **Verified Commercial Account:** A valid, active, and fully verified ShamCash commercial account.
-- **Logo URL:** A publicly accessible HTTP or HTTPS URL pointing to your application's logo. ShamCash uses this logo to identify your application to users.
-- **Application Name:** The name displayed to users when they make payments through ShamCash.
-
-## 3. Receive Your API Credentials
-
-Once your service has been created, ShamCash will provide the following integration credentials:
-
-- **agentKey:** Identifies your application to ShamCash.
-- **secretKey:** A Base64-encoded 32-byte AES key used to encrypt and decrypt API data.
-- **baseUrl:** The root URL used to access the ShamCash API endpoints.
-
-**Security note:** Keep your secretKey confidential and store it securely on your server, preferably in environment variables or a secrets manager. Never expose it in frontend code, public repositories, or client-side applications.
-
-Once you have received your credentials, you can configure the SDK and start integrating ShamCash payments using the instructions below.
-  
 ## About
 
 Implemented by [OkToCode](https://ok2code.com).
