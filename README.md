@@ -33,7 +33,7 @@
 
 Before integrating ShamCash, you must register a verified commercial account, complete the Service Creation process, and obtain your API credentials.
 
-See the [Prerequisites and Service Registration Guide](prerequisite.md) for the required information and registration instructions.
+See the [Prerequisites and Service Registration Guide](PREREQUISITE.md) for the required information and registration instructions.
 
 ## About
 
